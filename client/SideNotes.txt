@@ -7,4 +7,4 @@ Difference between bootstrap and tailwind css : refer to https://www.krishaweb.c
 PostCSS - Transform CSS with the power of JavaScript.
 GitHub Copilot is an AI coding assistant that helps you write code faster and with less effort, allowing you to focus more energy on problem solving and collaboration. 
 GitHub Copilot Chat is a chat interface that lets you interact with GitHub Copilot, to ask and receive answers to coding-related questions within GitHub.com and supported IDEs.
-Tailwind css intellisense suggests us some css classes.
+Tailwind css intellisense suggests us some css classes and know just this right now.
