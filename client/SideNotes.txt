@@ -1,4 +1,6 @@
 DAY 1 20/05/2024
+
+INSTALLING REACTJS AND TAILWIND CSS AND SETTING UP A GITHUB REPO
 Download reactjs and tailwind css using vite
 Vite is a local development server written by Evan You, the creator of Vue.js, and used by default by Vue and for React project templates.
 TypeScript is referred to as an Object-oriented programming language; on the other hand, JavaScript is a prototype-based language. TypeScript offers static types mean variables, objects, and functions, whereas JavaScript doesn't require the explicit declaration of the variables before they're used.
@@ -7,4 +9,21 @@ Difference between bootstrap and tailwind css : refer to https://www.krishaweb.c
 PostCSS - Transform CSS with the power of JavaScript.
 GitHub Copilot is an AI coding assistant that helps you write code faster and with less effort, allowing you to focus more energy on problem solving and collaboration. 
 GitHub Copilot Chat is a chat interface that lets you interact with GitHub Copilot, to ask and receive answers to coding-related questions within GitHub.com and supported IDEs.
-Tailwind css intellisense suggests us some css classes and know just this right now.
+Tailwind css intellisense suggests us some css classes.
+Set up an empty repository with no ReadMe file and use the three sentences given at the bottom to push the empty repo to track your folder. If a repo has been set at origin use git remove remote origin.
+________________________________________________________________________
+
+(Day 1 continued)
+ADDING PAGES AND ROUTES
+
+.jsx extension
+rfc - react fundamental component
+ReactJS- A js library used to build interactive UIs (user interfaces).
+The Document Object Model (DOM) interprets an XML or HTML file as a tree structure, with each node being an object that represents some aspect of the file.
+React’s Virtual DOM is a slimmed-down alternative to the heavyweight Real DOM. The performance difference between a virtual DOM and the real DOM is huge. Instead of updating the whole DOM when an object’s state changes, Virtual DOM updates only the specific object in question.
+For reactjs fundamentals visit: https://www.etatvasoft.com/blog/reactjs-fundamentals/#:~:text=In%20React%2C%20components%20operate%20as,be%20rendered%20as%20separate%20components.
+Or refer to net ninja course on YouTube.
+React allows us to build single page apps.
+A <BrowserRouter> stores the current location in the browser's address bar using clean URLs and navigates using the browser's built-in history stack.
+Whenever the location changes, <Routes> looks through all its child routes to find the best match and renders that branch of the UI.
+Route(note the asxence of 's')-They couple URL segments to components, data loading and data mutations.
