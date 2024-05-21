@@ -31,5 +31,15 @@ Our header is very interactive. So for that we use FlowBite-Flowbite is an open 
 _________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 DAY 3:
+SUCCESSFULLY ADDED HEADER
 Made Spelling errors.
 In Header.jsx under Componenets in src import link from react router dom and navbar from Flowbite
+Add effects on screen size change
+BACKEND BEGINS
+We create Backend in the root directory.
+npm init is a command-line instruction used to create a package. json file for a Node. js package.
+Upon running main file index.js we get the error because the default type is common.js. We have to make it module in package.json
+We make some changes in script in package.json : allow nodemon and to use node instead of nodemon add another script
+Any changes to index.js are shown in the terminal where express is working
+Use the command npm run dev to run the server on port 3000 (can be any number)
+Shift the gitignore file to the root directory from the client folder so that all the long list of installed packages are not tracked by git
