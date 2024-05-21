@@ -27,3 +27,9 @@ React allows us to build single page apps.
 A <BrowserRouter> stores the current location in the browser's address bar using clean URLs and navigates using the browser's built-in history stack.
 Whenever the location changes, <Routes> looks through all its child routes to find the best match and renders that branch of the UI.
 Route(note the asxence of 's')-They couple URL segments to components, data loading and data mutations.
+Our header is very interactive. So for that we use FlowBite-Flowbite is an open source collection of UI components built with the utility classes from Tailwind CSS that you can use as a starting point when coding user interfaces and websites.
+_________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+DAY 3:
+Made Spelling errors.
+In Header.jsx under Componenets in src import link from react router dom and navbar from Flowbite
