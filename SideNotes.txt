@@ -93,4 +93,8 @@ This advanced hashing algorithm uses salts, making it hard to crack by attacks s
  BcryptJS is the JavaScript implementation of the Bcrypt hashing algorithm , allowing you to use the hash encryption without having to meddle with complex hashing functions.
  Read about hashing algos
  Read about hashSync() and hash(): https://www.npmjs.com/package/bcryptjs#hashsyncs-salt
- 
+
+ ADDED A MIDDLEWARE AND A FUNCTION TO HANDLE ERRORS SO THAT WE MAY NOT HAVE TO WASTE TIME AT WRITING ERRORS
+ read about middleware: https://expressjs.com/en/guide/using-middleware.html
+The middleware is for the various errors being given back by the server while the function is for the errors created by us
+
