@@ -1,0 +1,71 @@
+DAY 1 20/05/2024
+
+INSTALLING REACTJS AND TAILWIND CSS AND SETTING UP A GITHUB REPO
+Download reactjs and tailwind css using vite
+Vite is a local development server written by Evan You, the creator of Vue.js, and used by default by Vue and for React project templates.
+TypeScript is referred to as an Object-oriented programming language; on the other hand, JavaScript is a prototype-based language. TypeScript offers static types mean variables, objects, and functions, whereas JavaScript doesn't require the explicit declaration of the variables before they're used.
+Typescript is a superset of js.
+Difference between bootstrap and tailwind css : refer to https://www.krishaweb.com/blog/tailwind-css-vs-bootstrap/#:~:text=Tailwind%20CSS%20follows%20a%20utility,components%20with%20pre%2Dstyled%20elements.
+PostCSS - Transform CSS with the power of JavaScript.
+GitHub Copilot is an AI coding assistant that helps you write code faster and with less effort, allowing you to focus more energy on problem solving and collaboration. 
+GitHub Copilot Chat is a chat interface that lets you interact with GitHub Copilot, to ask and receive answers to coding-related questions within GitHub.com and supported IDEs.
+Tailwind css intellisense suggests us some css classes.
+Set up an empty repository with no ReadMe file and use the three sentences given at the bottom to push the empty repo to track your folder. If a repo has been set at origin use git remove remote origin.
+________________________________________________________________________
+
+(Day 1 continued)
+ADDING PAGES AND ROUTES
+
+.jsx extension
+rfc - react fundamental component
+ReactJS- A js library used to build interactive UIs (user interfaces).
+The Document Object Model (DOM) interprets an XML or HTML file as a tree structure, with each node being an object that represents some aspect of the file.
+React’s Virtual DOM is a slimmed-down alternative to the heavyweight Real DOM. The performance difference between a virtual DOM and the real DOM is huge. Instead of updating the whole DOM when an object’s state changes, Virtual DOM updates only the specific object in question.
+For reactjs fundamentals visit: https://www.etatvasoft.com/blog/reactjs-fundamentals/#:~:text=In%20React%2C%20components%20operate%20as,be%20rendered%20as%20separate%20components.
+Or refer to net ninja course on YouTube.
+React allows us to build single page apps.
+A <BrowserRouter> stores the current location in the browser's address bar using clean URLs and navigates using the browser's built-in history stack.
+Whenever the location changes, <Routes> looks through all its child routes to find the best match and renders that branch of the UI.
+Route(note the asxence of 's')-They couple URL segments to components, data loading and data mutations.
+Our header is very interactive. So for that we use FlowBite-Flowbite is an open source collection of UI components built with the utility classes from Tailwind CSS that you can use as a starting point when coding user interfaces and websites.
+_________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+DAY 3:
+SUCCESSFULLY ADDED HEADER
+Made Spelling errors.
+In Header.jsx under Componenets in src import link from react router dom and navbar from Flowbite
+Add effects on screen size change
+BACKEND BEGINS
+We create Backend in the root directory.
+npm init is a command-line instruction used to create a package. json file for a Node. js package.
+Upon running main file index.js we get the error because the default type is common.js. We have to make it module in package.json
+We make some changes in script in package.json : allow nodemon and to use node instead of nodemon add another script
+Any changes to index.js are shown in the terminal where express is working
+Use the command npm run dev to run the server on port 3000 (can be any number)
+Shift the gitignore file to the root directory from the client folder so that all the long list of installed packages are not tracked by git
+
+CONNECTING TO THE DATABASE-MongoDB in our case 
+The comparison is not entirely correct. The difference between node.js and express.js in the level of abstraction: Node.js is a run-time environment for building server-side event-driven i/o application using javascript. Express.js is a framework based on node.js for building web-application using principles and approaches of node.js
+Install MongoDB
+MERN is one of several variations of the 
+MEAN stack (MongoDB, Express, Angular, Node), where the traditional Angular.js front-end framework is replaced with React.js. Other variants include MEVN (MongoDB, Express, Vue, Node), and really any front-end JavaScript framework.
+A technology stack is a set of technologies you choose and use to build a web application, mobile application or similar applications. A good technology stack must give a seamless user experience as well as be scalable and cost-effective. A typical tech stack contains a frontend, backend and database and is known as a full technology stack.
+Visit the website for understanding basics and teck stacks: https://www.mongodb.com/resources/languages/mern-stack
+One of the most important features of MERN stack is that all the technologies store data in the same format.
+We require a mongoDB UI so we need to work inside the mongoDB website
+________________________________________________________________________
+
+DAY 4:
+We have added script to outer package.json because so that we need nodemon to constantly update out server upon any changes made as otherwise too much time would be watsed in restarting the server eveytime. So, use npm run dev and not node api/index.js
+But while deploting out site we would be using node and not nodemon. So added another script.
+In NodeJS, environment variables provide a way to store and manage configurations, such as API keys, database credentials, and other settings, outside of your code.
+Upon creating dotenv file and storing our mongoDB cluster credentials in it, we get an error as by default we cannot include dotenv file in js file. Use dotenv package.
+dotenv.config configures the dotenv file
+Adding dotenv file adds security, reusability, if changes have to be made they are to be made at a single place.
+
+CREATING USER MODEL 
+We use schema of mongoose to define rules for the user : A Mongoose Schema defines the structure and property of the document in the MongoDB collection. This Schema is a way to define expected properties and values along with the constraints and indexes.
+Timestamps save the current time of the document created and also when it was updated in form of a Date by turning it true. When set to true, the mongoose creates two fields as follows: createdAt: Date representing when the document was created. updatedAt: Date representing when this document was last updated.
+Difference bwtween sql and nosql databases. Refer to net ninja mongodb tutorial.
+Collections have documnetns in them which have BSON objects (very similar to JSON objects) and they can be nested too.
+Every document would have a special id property assigned by mongodb. They are unique.
