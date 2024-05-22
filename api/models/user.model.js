@@ -19,6 +19,6 @@ const userSchema=new mongoose.Schema(
     }, //ends like this
     {timestamps:true}
 );
-const User = mongoose.model('User', userSchema);
+const User = mongoose.model('User', userSchema);//MongoDB will automatically put an 's' after User
 
 export default User;//but only one element can be exported to another component at a time as a default export.

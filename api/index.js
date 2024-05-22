@@ -1,10 +1,10 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import userRoute from './routes/user.route.js';//Noice the . before /
+import userRoute from './routes/user.route.js';//Notice the . before /
+import authRoute from './routes/auth.route.js';
 
 dotenv.config();
-const app=express();
 mongoose.connect(process.env.MONGO)
 .then(()=>{
     console.log('Connected');
@@ -12,9 +12,11 @@ mongoose.connect(process.env.MONGO)
 .catch((e)=>{
     console.log(e);
 });
-
+const app=express();
+app.use(express.json());
 app.listen(3000,()=>{
     console.log("Server is running on port 3000!!");
 });
 
 app.use('/api/user',userRoute);//we use the use method here
+app.use('/api/auth',authRoute);//didnt add / before api

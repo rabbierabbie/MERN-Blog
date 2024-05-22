@@ -85,3 +85,12 @@ In the backend, while importing we need to add .js to file names.
 When default components are imported their names may be changes in the import statement.
 For difference between expressjs functions get() and use(), follow : https://stackoverflow.com/questions/15601703/difference-between-app-use-and-app-get-in-express-js
 We add two dots when we need to go outside the current folder and into the specified folder while importing files
+Since we do not have a testing process as we donot have frontend right now, use insomnia api tester
+API testing is performed at the backend of a software without having a UI frontend. Test cases directly call the API endpoints and validate the responses.
+The await keyword basically makes JavaScript wait until the Promise object is resolved or rejected.
+If someone has access to our databases we lose data. So to secure our users' data we use hashing.
+This advanced hashing algorithm uses salts, making it hard to crack by attacks such as brute-forcing.
+ BcryptJS is the JavaScript implementation of the Bcrypt hashing algorithm , allowing you to use the hash encryption without having to meddle with complex hashing functions.
+ Read about hashing algos
+ Read about hashSync() and hash(): https://www.npmjs.com/package/bcryptjs#hashsyncs-salt
+ 
