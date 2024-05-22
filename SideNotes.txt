@@ -69,3 +69,19 @@ Timestamps save the current time of the document created and also when it was up
 Difference bwtween sql and nosql databases. Refer to net ninja mongodb tutorial.
 Collections have documnetns in them which have BSON objects (very similar to JSON objects) and they can be nested too.
 Every document would have a special id property assigned by mongodb. They are unique.
+Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js
+MongoDB allows flexible data structuring, but Mongoose adds structure and consistency with enforceable models, enhancing code readability and maintenance.
+Each schema maps to a MongoDB collection and defines the shape of the documents within that collection.
+Models are responsible for creating and reading documents from the underlying MongoDB database
+Refer to : https://www.geeksforgeeks.org/mongoose-mongoose-model-function/
+
+CREATING OUR TEST API SO AS TO CHECK BACKEND FROM THAT FRONTEND API
+Read about API: https://aws.amazon.com/what-is/api/
+JSON object literals are surrounded by curly braces {}. JSON object literals contains key/value pairs. Keys and values are separated by a colon.
+A route is a section of Express code that associates an HTTP verb ( GET , POST , PUT , DELETE , etc.), a URL path/pattern, and a function that is called to handle that pattern.
+Even though JSON is derived from JavaScript object notation syntax, JSON is a text-only subset of JavaScript syntax. In JSON, data is represented in name/value pairs separated by a comma. The curly bracket contains the object and is separated from the name by a colon.
+We need many APIs. So, integrating them directly into index.js won't be good. So, we create separate files.
+In the backend, while importing we need to add .js to file names.
+When default components are imported their names may be changes in the import statement.
+For difference between expressjs functions get() and use(), follow : https://stackoverflow.com/questions/15601703/difference-between-app-use-and-app-get-in-express-js
+We add two dots when we need to go outside the current folder and into the specified folder while importing files
