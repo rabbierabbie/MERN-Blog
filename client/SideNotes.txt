@@ -43,3 +43,22 @@ We make some changes in script in package.json : allow nodemon and to use node i
 Any changes to index.js are shown in the terminal where express is working
 Use the command npm run dev to run the server on port 3000 (can be any number)
 Shift the gitignore file to the root directory from the client folder so that all the long list of installed packages are not tracked by git
+
+CONNECTING TO THE DATABASE-MongoDB in our case 
+The comparison is not entirely correct. The difference between node.js and express.js in the level of abstraction: Node.js is a run-time environment for building server-side event-driven i/o application using javascript. Express.js is a framework based on node.js for building web-application using principles and approaches of node.js
+Install MongoDB
+MERN is one of several variations of the 
+MEAN stack (MongoDB, Express, Angular, Node), where the traditional Angular.js front-end framework is replaced with React.js. Other variants include MEVN (MongoDB, Express, Vue, Node), and really any front-end JavaScript framework.
+A technology stack is a set of technologies you choose and use to build a web application, mobile application or similar applications. A good technology stack must give a seamless user experience as well as be scalable and cost-effective. A typical tech stack contains a frontend, backend and database and is known as a full technology stack.
+Visit the website for understanding basics and teck stacks: https://www.mongodb.com/resources/languages/mern-stack
+One of the most important features of MERN stack is that all the technologies store data in the same format.
+We require a mongoDB UI so we need to work inside the mongoDB website
+________________________________________________________________________
+
+DAY 4:
+We have added script to outer package.json because so that we need nodemon to constantly update out server upon any changes made as otherwise too much time would be watsed in restarting the server eveytime. So, use npm run dev and not node api/index.js
+But while deploting out site we would be using node and not nodemon. So added another script.
+In NodeJS, environment variables provide a way to store and manage configurations, such as API keys, database credentials, and other settings, outside of your code.
+Upon creating dotenv file and storing our mongoDB cluster credentials in it, we get an error as by default we cannot include dotenv file in js file. Use dotenv package.
+dotenv.config configures the dotenv file
+Adding dotenv file adds security, reusability, if changes have to be made they are to be made at a single place.
