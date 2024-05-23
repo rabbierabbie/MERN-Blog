@@ -125,4 +125,16 @@ For tokens : https://www.npmjs.com/package/jsonwebtoken
 V.imp. : https://www.freecodecamp.org/news/how-to-sign-and-validate-json-web-tokens/
 It is important to note that the cryptographic signature at the end of the JWT is just for validation. It doesn't encrypt any data in the header or payload segments of the token. So you should never send sensitive information like a user's password in a JWT – everything in the header and payload can and should be public.
 
+USING REDUX TOOLKIT
+We would be needing to create global states for profile image and drop-down menu.
+Redux is a way to manage the “state” or we can say it is a cache or storage that can be accessed by all components with a structured way. It has to be accessed through a “Reducer” and “Actions”
+Redux Toolkit is our official recommended approach for writing Redux logic. It wraps around the Redux core, and contains packages and functions that we think are essential for building a Redux app.
+It has to be in the frontend and not the backend.
+A Redux app really only has one reducer function: the "root reducer" function that you will pass to createStore later on. That one root reducer function is responsible for handling all of the actions that are dispatched, and calculating what the entire new state result should be every time.
+Reducers, as the name suggests, take in two things: previous state and an action. Then they reduce it (read it return) to one entity: the new updated instance of state. So reducers are basically pure JS functions which take in the previous state and an action and return the newly updated state.
+A slice is the portion of Redux code that relates to a specific set of data and actions within the store 's state. 
+A slice reducer is the reducer responsible for handling actions and updating the data for a given slice. This allows for smaller reducer functions that focus on a slice of state.
+Read:https://redux.js.org/tutorials/fundamentals/part-3-state-actions-reducers
+Actions are plain JavaScript objects that have a type field. As mentioned earlier, you can think of an action as an event that describes something that happened in the application.
+For configureStore(): read: https://redux-toolkit.js.org/api/configureStore
 
