@@ -112,3 +112,7 @@ For middleware handling, read: https://expressjs.com/en/guide/using-middleware.h
 We have the frontend running on 5173 and the backend on 3000. So we use proxy.
 You can use the proxy option in your vite. config. js file. The proxy option allows you to redirect certain requests to a different server during development. This is useful, for example, when your frontend application needs to communicate with a backend API running on a separate server.
 After trying once, check in networks for signup and see the request made and its network, header,payload.
+
+CREATING FOOTER COMPONENT 
+Added lot of css using flowbite components. Didn't add symbols of facebook and all.
+Currently didnot set footer at the bottom of every page
