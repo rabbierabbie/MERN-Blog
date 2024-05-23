@@ -116,3 +116,11 @@ After trying once, check in networks for signup and see the request made and its
 CREATING FOOTER COMPONENT 
 Added lot of css using flowbite components. Didn't add symbols of facebook and all.
 Currently didnot set footer at the bottom of every page
+
+CREATING THE SIGNIN API 
+We will be installing jsonwebtoken
+We will be using tokens - What Is Token-based Authentication? Token-based authentication is a protocol that generates encrypted security tokens. It enables users to verify their identity to websites, which then generates a unique encrypted authentication token.
+JWT is a standard. To read : https://www.geeksforgeeks.org/json-web-token-jwt/
+For tokens : https://www.npmjs.com/package/jsonwebtoken
+V.imp. : https://www.freecodecamp.org/news/how-to-sign-and-validate-json-web-tokens/
+It is important to note that the cryptographic signature at the end of the JWT is just for validation. It doesn't encrypt any data in the header or payload segments of the token. So you should never send sensitive information like a user's password in a JWT – everything in the header and payload can and should be public.
