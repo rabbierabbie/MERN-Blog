@@ -124,3 +124,5 @@ JWT is a standard. To read : https://www.geeksforgeeks.org/json-web-token-jwt/
 For tokens : https://www.npmjs.com/package/jsonwebtoken
 V.imp. : https://www.freecodecamp.org/news/how-to-sign-and-validate-json-web-tokens/
 It is important to note that the cryptographic signature at the end of the JWT is just for validation. It doesn't encrypt any data in the header or payload segments of the token. So you should never send sensitive information like a user's password in a JWT – everything in the header and payload can and should be public.
+
+
