@@ -138,3 +138,6 @@ Read:https://redux.js.org/tutorials/fundamentals/part-3-state-actions-reducers
 Actions are plain JavaScript objects that have a type field. As mentioned earlier, you can think of an action as an event that describes something that happened in the application.
 For configureStore(): read: https://redux-toolkit.js.org/api/configureStore
 
+DIDNOT ADD GOOGLE Authentication
+
+
