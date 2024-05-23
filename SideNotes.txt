@@ -98,3 +98,17 @@ This advanced hashing algorithm uses salts, making it hard to crack by attacks s
  read about middleware: https://expressjs.com/en/guide/using-middleware.html
 The middleware is for the various errors being given back by the server while the function is for the errors created by us
 
+CREATED THE SIGNUP PAGE UI
+ADDED FUNCTIONALITY TO SIGNUP PAGE
+________________________________________________________________________
+DAY 5
+ADDING FUNCTIONALITY TO SIGNUP PAGE
+
+An API endpoint is a URL that acts as the point of contact between an API client and an API server.
+For api fetch(), read : https://developer.mozilla.org/en-US/docs/Web/API/fetch
+Base URL: The consistent part or the root of your website's address.
+When a fetch request is made (express acts as the handler of middleware functions), with a certain url as parameter, the middleware is mounted on the app.use() as app object represents express. If no url path is mentioned in use(), the function is executed everytime the app receives a request. With a path, the function is executed for any type of HTTP request on the path.
+For middleware handling, read: https://expressjs.com/en/guide/using-middleware.html
+We have the frontend running on 5173 and the backend on 3000. So we use proxy.
+You can use the proxy option in your vite. config. js file. The proxy option allows you to redirect certain requests to a different server during development. This is useful, for example, when your frontend application needs to communicate with a backend API running on a separate server.
+After trying once, check in networks for signup and see the request made and its network, header,payload.
