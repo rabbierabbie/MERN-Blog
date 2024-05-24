@@ -3,9 +3,11 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
+import {useSelector} from 'react-redux';
 
 export default function Header(){
   const path=useLocation().pathname;
+  const currentUser=useSelector(state=>state.user);
   return (
     <Navbar className='border-b-2'>
       <Link
@@ -36,9 +38,17 @@ export default function Header(){
         >
           <FaMoon />
         </Button>
-        <Link to='/signin'>
+        {currentUser?(
+          <Dropdown> {/*Excellent features of flowbite*/}
+              <Dropdown.Item>
+
+              </Dropdown.Item>
+          </Dropdown>
+        ):
+        (<Link to='/signin'>
           <Button gradientDuoTone='purpleToBlue' outline>Sign In</Button>
         </Link>
+        )}
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>

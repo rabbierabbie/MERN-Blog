@@ -138,6 +138,14 @@ Read:https://redux.js.org/tutorials/fundamentals/part-3-state-actions-reducers
 Actions are plain JavaScript objects that have a type field. As mentioned earlier, you can think of an action as an event that describes something that happened in the application.
 For configureStore(): read: https://redux-toolkit.js.org/api/configureStore
 
-DIDNOT ADD GOOGLE Authentication
+ADDING GOOGLE Authentication
+Installed Firebase in frontend 
+Firebase is a set of backend cloud computing services and application development platforms provided by Google. It hosts databases, services, authentication, and integration for a variety of applications, including Android, iOS, JavaScript, Node.js, Java, Unity, PHP, and C++.
+Read about OAuth : https://www.varonis.com/blog/what-is-oauth
+Read about setCustomParameters() : (i) https://developers.google.com/identity/openid-connect/openid-connect#authenticationuriparameters and (ii) https://firebase.google.com/docs/reference/node/firebase.auth.GoogleAuthProvider
+Upon clicking authentication after all the process, we will see an error in the console which is not for our code but entirely for google chrome.
+Read about json object : https://developer.mozilla.org/en-US/docs/Web/API/Response/json_static
 
+
+UPDATING THE HEADERS SECTION WITH THE PROFILE PICTURE AND INFO OF THE USER
 
