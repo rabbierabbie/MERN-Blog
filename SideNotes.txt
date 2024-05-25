@@ -148,4 +148,5 @@ Read about json object : https://developer.mozilla.org/en-US/docs/Web/API/Respon
 
 
 UPDATING THE HEADERS SECTION WITH THE PROFILE PICTURE AND INFO OF THE USER
-
+Applications panel of Dev tools not working
+Had to thus delete documents from mongoDB atlas itself
