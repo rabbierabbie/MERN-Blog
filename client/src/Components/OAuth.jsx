@@ -30,6 +30,7 @@ export default function OAuth() {
                 dispatch(signInSuccess(data))
                 navigate('/')
             }
+            console.log(resultsFromGoogle.user.photoURL);
         } catch (error) {
             console.log(error);
         }
