@@ -163,4 +163,11 @@ URLSearchParams.get(name) - https://developer.mozilla.org/en-US/docs/Web/API/URL
 DESIGNED PROFILE PAGE
 Added profile photo delete account update buttons.
 
+SET PROFILE IMAGE 
+Convert our file to a temporary url and then upload that url
+Upon generating the temporary url and setting profilePicture equal to that url, as we refresh stuff we get the old picture back.
+So. we save the image in the storage and receive the real permanent url and use it instead.
+We want that upon clicking the profile picture we get the input image file option, so we create a reference.
+Had to change rules on google firebase
+
 
