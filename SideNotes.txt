@@ -150,3 +150,12 @@ Read about json object : https://developer.mozilla.org/en-US/docs/Web/API/Respon
 UPDATING THE HEADERS SECTION WITH THE PROFILE PICTURE AND INFO OF THE USER
 Applications panel of Dev tools not working
 Had to thus delete documents from mongoDB atlas itself
+
+COMPLETING THE SIDEBAR OF THE DASHBOARD
+The question mark in the url is : Its name is query string. After the question mark you can pass key-value pairs and use them server-side.
+useLocation : A location is a particular entry in the history stack, usually analogous to a "page" or "screen" in your app. As the user clicks on links and moves around the app, the current location changes.
+This hook returns the current location object. This can be useful if you'd like to perform some side effect whenever the current location changes.
+The query string refers to a portion in the URL starting from the `?` character followed by a key (’age’ and ‘name’ ) and value (’20’ and ‘alex’) pairs. These keys and value pairs are called parameters and are separated by the `&` character.
+Read about useLocation : https://medium.com/@alexanie_/https-ocxigin-hashnode-dev-uselocation-hook-in-react-router-758a0a711308
+The URLSearchParams interface defines utility methods to work with the query string of a URL.
+URLSearchParams.get(name) - https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/get
