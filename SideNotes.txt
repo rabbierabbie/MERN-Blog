@@ -159,3 +159,8 @@ The query string refers to a portion in the URL starting from the `?` character 
 Read about useLocation : https://medium.com/@alexanie_/https-ocxigin-hashnode-dev-uselocation-hook-in-react-router-758a0a711308
 The URLSearchParams interface defines utility methods to work with the query string of a URL.
 URLSearchParams.get(name) - https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/get
+
+DESIGNED PROFILE PAGE
+Added profile photo delete account update buttons.
+
+
