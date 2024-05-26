@@ -168,6 +168,12 @@ Convert our file to a temporary url and then upload that url
 Upon generating the temporary url and setting profilePicture equal to that url, as we refresh stuff we get the old picture back.
 So. we save the image in the storage and receive the real permanent url and use it instead.
 We want that upon clicking the profile picture we get the input image file option, so we create a reference.
-Had to change rules on google firebase
+Had to change rules on google firebase.
 
-
+DAY 7
+ADDING UPDATE ROUTE FOR USER PROFILE
+Updating user profile- for that we need to authenticate the user. In verifyUser, we use cookie settings. For that install cookie-parser and make changes in index.js as it is the main file for backend.
+For jwt functions: https://www.npmjs.com/package/jsonwebtoken
+In updateUser(), we first log out the user details from the request object. Use insomnia and create a put request for it.
+We actually are dealing with two ids in updateUser() in user.controller.js. One that is returned by the token of the signedIn user and the one that we are asking to generate and is in the form of userID in the url.
+For mongoose findByIdAndUpdate : read : https://www.geeksforgeeks.org/mongoose-queries-model-findbyidandupdate-function/
