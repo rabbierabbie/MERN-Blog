@@ -200,6 +200,11 @@ We add the isAdmin property to the cookie and it is safe as the cookie is encryp
 people may change the frontend and change the default to true but the backend will check the cookie.
 
 COMPLETE CREATE A POST UI
-We need to install reactQuill packagealong with its css.
+We need to install reactQuill packagealong with its css to get the section for typing blog.
+
+CREATING API ROUTE FOR NEW POST 
+A Slug is the unique identifying part of a web address, typically at the end of the URL. In the context of MDN, it is the portion of the URL following "<locale>/docs/".
+Search engine algorithms need clear, clean, and optimized content to understand the data they come in contact with. Having a clean, clear, and short URL slug helps your website visitors and search engines comprehend your pages. Your URL slug can also be an untapped source of keyword ranking potential - SEO 
+
 
 
