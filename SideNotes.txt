@@ -182,3 +182,8 @@ ADDING UPDATE FUNCTIONALITY TO UPDATE BUTTON
 Earlier just the image alone was not updating, so, in the updateUser method we made a mistake of coveing the try catch block also under username block.
 Added updateSuccess, updateFailure, updateStart to user file in redux folder
 Add different states for success and failure 
+
+DAY 8
+
+ADD DELETE USER FUNCTIONALITY
+Just created a delete request and tried on insomnia.
