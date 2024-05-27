@@ -195,6 +195,9 @@ ADD SIGNOUT FUNCTIONALITY TO SIGNOUT BUTTON
 For signout we need to not clear the data from the database but the cookie from the site storage and clear the redux interface too.
 We set the currentuser to null (global state).
 
-DID NOT ADD ADMIN FUNCTIONALITY 
+ADD ADMIN FUNCTIONALITY 
+We add the isAdmin property to the cookie and it is safe as the cookie is encrypted. Also, thus we will be able to use to check whether the current user is an admin or not and whether that user can be given extra privileges or not.
+people may change the frontend and change the default to true but the backend will check the cookie.
 
+COMPLETE CREATE A POST UI
 
