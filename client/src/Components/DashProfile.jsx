@@ -185,12 +185,25 @@ export default function DashProfile() {
           placeholder='password'
           onChange={handleChange}
         />
-        <Button
+       <Button
           type='submit'
           gradientDuoTone='purpleToBlue'
           outline
-        > Update        
+          disabled={loading}
+        >
+          {loading ? 'Loading...' : 'Update'}
         </Button>
+        {currentUser.isAdmin && (
+          <Link to={'/create-post'}>{/**If '/' is not added, if will redirect to /dashboard/create-post */}
+            <Button
+              type='button'
+              gradientDuoTone='purpleToPink'
+              className='w-full'
+            >
+              Create a post
+            </Button>
+          </Link>
+        )}
         </form>
         <div className='text-red-500 flex justify-between mt-5'>
         <span className='cursor-pointer' onClick={() => setShowModal(true)}>

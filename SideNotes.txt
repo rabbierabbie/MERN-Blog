@@ -200,4 +200,6 @@ We add the isAdmin property to the cookie and it is safe as the cookie is encryp
 people may change the frontend and change the default to true but the backend will check the cookie.
 
 COMPLETE CREATE A POST UI
+We need to install reactQuill packagealong with its css.
+
 
