@@ -177,3 +177,8 @@ For jwt functions: https://www.npmjs.com/package/jsonwebtoken
 In updateUser(), we first log out the user details from the request object. Use insomnia and create a put request for it.
 We actually are dealing with two ids in updateUser() in user.controller.js. One that is returned by the token of the signedIn user and the one that we are asking to generate and is in the form of userID in the url.
 For mongoose findByIdAndUpdate : read : https://www.geeksforgeeks.org/mongoose-queries-model-findbyidandupdate-function/
+
+ADDING UPDATE FUNCTIONALITY TO UPDATE BUTTON 
+Earlier just the image alone was not updating, so, in the updateUser method we made a mistake of coveing the try catch block also under username block.
+Added updateSuccess, updateFailure, updateStart to user file in redux folder
+Add different states for success and failure 
