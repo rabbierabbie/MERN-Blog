@@ -189,3 +189,12 @@ ADD DELETE USER FUNCTIONALITY
 Just created a delete request and tried on insomnia.
 
 COMPLETE DELETE USER FUNCTIONALITY BY ADDING LIFE TO DELETE USER METHOD 
+Added deleteSuccess.deleteFailure,deleteStart to userSlice and used Modal component of flowbite-react
+
+ADD SIGNOUT FUNCTIONALITY TO SIGNOUT BUTTON
+For signout we need to not clear the data from the database but the cookie from the site storage and clear the redux interface too.
+We set the currentuser to null (global state).
+
+DID NOT ADD ADMIN FUNCTIONALITY 
+
+
