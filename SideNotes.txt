@@ -206,5 +206,11 @@ CREATING API ROUTE FOR NEW POST
 A Slug is the unique identifying part of a web address, typically at the end of the URL. In the context of MDN, it is the portion of the URL following "<locale>/docs/".
 Search engine algorithms need clear, clean, and optimized content to understand the data they come in contact with. Having a clean, clear, and short URL slug helps your website visitors and search engines comprehend your pages. Your URL slug can also be an untapped source of keyword ranking potential - SEO 
 
+ADDED UPLOAD POST IMAGE FUNCTIONALITY 
+
+COMPLETED CREATE POST UI 
+We added a bit of changes in React Quill as compared to normal react components 
+We did not add uploading image effect 
+
 
 
