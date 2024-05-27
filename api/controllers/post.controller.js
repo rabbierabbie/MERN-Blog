@@ -19,7 +19,7 @@ export const create = async (req, res, next) => {
     userId: req.user.id,
   });
   try {
-    const savedPost = await newPost.save();//Ideal method to save stuff to mongoose documents
+    const savedPost = await newPost.save();//Ideal method to save stuff to mongoose
     res.status(201).json(savedPost);
   } catch (error) {
     next(error);
