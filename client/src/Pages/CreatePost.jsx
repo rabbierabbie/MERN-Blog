@@ -144,7 +144,7 @@ export default function CreatePost() {
           placeholder='Write something...'
           className='h-72 mb-12'
           required
-          onChange={(value) => {
+          onChange={(value) => {//Here in React Quill instead of event listener we get a value.
             setFormData({ ...formData, content: value });
           }}
         />
