@@ -241,6 +241,19 @@ Updated the DashPosts page. But this time while fetching posts greater than 9 in
 DELETE POST BUTTON FUNCTIONALITY 
 Added life to the delete button.
 
+CREATING THE UPDATE POST PAGE 
+When adding the component to main frontend file app.jsx, conceal it within the OnlyAdminprivateRoute and also ensure that you add the /:postId to the url the component is referring to.
+In the main update post page, we use the useParams to get the postId from the url because a fetch request explicitly has not been made here. Rather a page has been rendered from app.jsx with a fixed url.
+Also, we need to think as to when does the rendered page/component need to update itsef and upon the occurence of what changes. So, we find it is the postId. Thus, use useEffect for it and pass postId as dependency.
+(Think like what if we have the sites opened at multiple spots. Do we require to rerender the page at every state change that is being done by you or even another user or at particular times.)
+
+ADDING THE UPDATE POST FUNCTIONALITY 
+Added changes to the already created create post page.
+Used the edit post route and added it to the controller.
+
+
+
+
 
 
 
