@@ -255,6 +255,12 @@ ADD VIEW ALL USERS API ROUTE FOR JUST THE ADMIN
 Check whether the person is an admin or not first.
 We need to filter out the data returned in the the response to the get request by excluding the passwords.
 
+ADD VIEW USERS PAGE TO ADMIN DASHBOARD 
+Almost the same as view users' posts page.
+The 'add id to every child' error occurs due to the map function being used. So, we have added the id there.
+Not yet created the delete user api route.
+
+CREATE DELETE USER API ROUTE
 
 
 
