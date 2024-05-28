@@ -211,6 +211,13 @@ ADDED UPLOAD POST IMAGE FUNCTIONALITY
 COMPLETED CREATE POST UI 
 We added a bit of changes in React Quill as compared to normal react components 
 We did not add uploading image effect 
+__________________________________________________________________________ 
+
+DAY 9
+ADD POSTS OPTION TO DASH SIDEBAR AND ADD POSTS COMPONENT 
+Created new component dashposts in dashsidebar and connected it to a new page. 
+
+ADD API ROUTE FOR POSTS 
 
 
 
