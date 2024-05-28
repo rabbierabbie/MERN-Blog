@@ -247,10 +247,13 @@ In the main update post page, we use the useParams to get the postId from the ur
 Also, we need to think as to when does the rendered page/component need to update itsef and upon the occurence of what changes. So, we find it is the postId. Thus, use useEffect for it and pass postId as dependency.
 (Think like what if we have the sites opened at multiple spots. Do we require to rerender the page at every state change that is being done by you or even another user or at particular times.)
 
-ADDING THE UPDATE POST FUNCTIONALITY 
+ADD THE UPDATE POST FUNCTIONALITY 
 Added changes to the already created create post page.
 Used the edit post route and added it to the controller.
 
+ADD VIEW ALL USERS API ROUTE FOR JUST THE ADMIN 
+Check whether the person is an admin or not first.
+We need to filter out the data returned in the the response to the get request by excluding the passwords.
 
 
 

@@ -1,6 +1,7 @@
 import express from 'express';
 import {
   deleteUser,
+    getusers,
     signout,
     updateUser,
   } from '../controllers/user.controller.js';
@@ -13,5 +14,6 @@ router.get('/test', test);
 router.put('/update/:userId', verifyToken, updateUser);
 router.delete('/delete/:userId',verifyToken,deleteUser);
 router.post('/signout', signout); //no use of id as anybody can sign out and no need to verifyuser too.
+router.get('/getusers', verifyToken, getusers);
 
 export default router;
