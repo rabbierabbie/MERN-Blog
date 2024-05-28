@@ -63,11 +63,11 @@ export const updateUser = async (req, res, next) => {
 };
 
 export const deleteUser = async (req, res, next) => {
-  if (req.user.id !== req.params.userId) {
+  if (!req.user.isAdmin && req.user.id !== req.params.userId) {
     return next(errorHandler(403, 'You are not allowed to update this user'));
   }
   try{
-    await User.findByIdAndDelete(req.user.id);
+    await User.findByIdAndDelete(req.params.userId);//Here, since we are using this function for delete user by admin it is not necessary that params.userId and user.Id are same. So, we have to actually delete params.userId in both cases.
     res.status(200).json({'message':'User has been deleted'});
   }
   catch(err){
