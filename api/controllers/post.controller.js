@@ -25,3 +25,58 @@ export const create = async (req, res, next) => {
     next(error);
   }
 };
+
+export const getposts = async (req, res, next) => {
+  try {
+    const startIndex = parseInt(req.query.startIndex) || 0;
+    const limit = parseInt(req.query.limit) || 9;
+    const sortDirection = req.query.order === 'asc' ? 1 : -1;
+    const posts = await Post.find({
+      //... is not an operator. (...arr) is not valid JavaScript. ... is only allowed inside array literals and in arguments lists, but those are special forms of the syntax (notice the ... in the production rules below).
+
+      //The below mentioned properties are as defined on the posts model of our mongoDB account
+      ...(req.query.userId && { userId: req.query.userId }),
+      ...(req.query.category && { category: req.query.category }),
+      ...(req.query.slug && { slug: req.query.slug }),
+      ...(req.query.postId && { _id: req.query.postId }),
+      ...(req.query.searchTerm && {
+        //This is not spread operator but rest operator that allows us to use a way to represent variadic functions in js
+        $or:
+        //The $or operator performs a logical OR operation on an array of one or more <expressions> and selects the documents that satisfy at least one of the <expressions>. 
+        //https://www.mongodb.com/docs/manual/reference/operator/query/or/
+          [{ title: { $regex: req.query.searchTerm, $options: 'i' } },
+          { content: { $regex: req.query.searchTerm, $options: 'i' } },//i represents the metcharacter in regex and defines insensitivity to case
+          //https://www.mongodb.com/docs/manual/reference/operator/query/regex/ for regex function in mongodb
+        ],
+      }),
+    })
+      .sort({ updatedAt: sortDirection })//read : https://mongoosejs.com/docs/api/query.html#Query.prototype.sort()
+      .skip(startIndex)//Specifies the number of documents to skip.
+      .limit(limit);//Specifies the maximum number of documents the query will return.
+
+    const totalPosts = await Post.countDocuments();
+
+    const now = new Date();
+    const month=now.getMonth() - 1;
+    if(now.getMonth()===0){
+      month=11;
+    }
+    const oneMonthAgo = new Date(
+      now.getFullYear(),
+      month,//0 based numbering
+      now.getDate()
+    );
+    //Lodash _.gte() method is used to check whether the specified value is greater than or equal to another or not.
+    const lastMonthPosts = await Post.countDocuments({
+      createdAt: { $gte: oneMonthAgo },
+    });
+
+    res.status(200).json({
+      posts,
+      totalPosts,
+      lastMonthPosts,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
