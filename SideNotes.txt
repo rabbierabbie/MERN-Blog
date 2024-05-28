@@ -238,7 +238,8 @@ Use table component of flowbite-react
 ADDED THE SHOWMORE FUNCTIONALITY TO THE SHOW USER POSTS PAGE
 Updated the DashPosts page. But this time while fetching posts greater than 9 in number we need to attach the start index too.
 
-
+DELETE POST BUTTON FUNCTIONALITY 
+Added life to the delete button.
 
 
 
