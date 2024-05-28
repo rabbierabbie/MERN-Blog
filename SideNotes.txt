@@ -226,5 +226,17 @@ The arguments object is not a real array, while rest parameters are Array instan
 A function definition can only have one rest parameter, and the rest parameter must be the last parameter in the function definition.
 Used functions of mongodb and mongoose.
 
+SHOW USER POSTS INSIDE DASHBOARD
+Used useEffect() as any change made should re-render the dom. 
+
+CREATING USER POSTS UI 
+To get the scroll bar at the bottom of the ui, we should download tailwind-scrollbar in client (frontend)
+We added a plugin too. 
+Whenever we add something to our plugins or change the config files, we need to restart the server.
+USe table component of flowbite-react
+
+
+
+
 
 
