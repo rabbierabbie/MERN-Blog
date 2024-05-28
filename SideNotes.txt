@@ -264,6 +264,11 @@ CREATE DELETE USER API ROUTE
 We actually used the previous delete user route.
 Here, since we are using deleteuser function for delete user by admin it is not necessary that params.userId and user.Id are same. So, we have to actually delete params.userId in both cases.
 
+ADDED DELETE FUNCTIONALITY TO DELETE BUTTON TOO
+
+STARTED WITH ADDING POSTS PAGE
+\ imp: has by mistake deleted only admin account. Had to create another. Now, the earlier posts were in the name of the previous userid. So had to create another set of posts. \
+
 
 
 

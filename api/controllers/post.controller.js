@@ -27,6 +27,7 @@ export const create = async (req, res, next) => {
 };
 
 export const getposts = async (req, res, next) => {
+  //console.log("hey  fgdfggdgdg");
   try {
     const startIndex = parseInt(req.query.startIndex) || 0;
     const limit = parseInt(req.query.limit) || 9;
@@ -55,14 +56,10 @@ export const getposts = async (req, res, next) => {
       .limit(limit);//Specifies the maximum number of documents the query will return.
 
     const totalPosts = await Post.countDocuments();
-
+    //console.log(posts.length);
     const now = new Date();
     const month=now.getMonth() - 1;
     const year=now.getFullYear();
-    if(now.getMonth()===0){
-      month=11;
-      year=year-1;
-    }
     const oneMonthAgo = new Date(
       year,
       month,//0 based numbering
@@ -72,7 +69,7 @@ export const getposts = async (req, res, next) => {
     const lastMonthPosts = await Post.countDocuments({
       createdAt: { $gte: oneMonthAgo },
     });
-
+    
     res.status(200).json({
       posts,
       totalPosts,
