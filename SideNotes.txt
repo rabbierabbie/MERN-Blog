@@ -233,7 +233,11 @@ CREATING USER POSTS UI
 To get the scroll bar at the bottom of the ui, we should download tailwind-scrollbar in client (frontend)
 We added a plugin too. 
 Whenever we add something to our plugins or change the config files, we need to restart the server.
-USe table component of flowbite-react
+Use table component of flowbite-react
+
+ADDED THE SHOWMORE FUNCTIONALITY TO THE SHOW USER POSTS PAGE
+Updated the DashPosts page. But this time while fetching posts greater than 9 in number we need to attach the start index too.
+
 
 
 

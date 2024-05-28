@@ -14,6 +14,7 @@ export default function DashPosts() {
 
   const { currentUser } = useSelector((state) => state.user);
   const [userPosts, setUserPosts] = useState([]);
+  const [showMore, setShowMore] = useState(true);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -31,6 +32,24 @@ export default function DashPosts() {
         fetchPosts();//Here you have to deliberately call fetch posts as it is not the direct function to be passed in the arguments body.
       }
     }, [currentUser._id]);
+
+    const handleShowMore = async () => {
+      const startIndex = userPosts.length;
+      try {
+        const res = await fetch(
+          `/api/post/getposts?userId=${currentUser._id}&startIndex=${startIndex}`
+        );
+        const data = await res.json();
+        if (res.ok) {
+          setUserPosts((prev) => [...prev, ...data.posts]);
+          if (data.posts.length < 9) {
+            setShowMore(false);
+          }
+        }
+      } catch (error) {
+        console.log(error.message);
+      }
+    };
 
   return (
     //table-auto used in the css below for the table adjusting according to its content on its own.
@@ -93,6 +112,14 @@ export default function DashPosts() {
               </Table.Body>
             ))}
           </Table>
+          {showMore && (
+            <button
+              onClick={handleShowMore}
+              className='w-full text-teal-500 self-center text-sm py-7'
+            >
+              Show more
+            </button>
+          )}
           </>
           ):(
             <p>You have no posts yet!</p>
