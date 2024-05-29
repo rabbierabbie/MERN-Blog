@@ -302,7 +302,14 @@ Remember to create states.
 Remember the flow for search functionality : In app.jsx the search page is attached through the route /search. Inside the search button on home page and view more buttons on home page this /search parameter is passed in the url. usenavigate hook is thus used. The search page is rendered. Now, inside the search page the useEffect hook has dependency location.search where location is the location object returned by the useLocation hook and search is the prop for getting the query string. (Remember to make changes and then convert the queryString to string using toString.) fetch request is sent using getposts route through express to mongodb (atlas storing) documents stored in Posts model. Even th sidebar in the search page merely navigates to the page with the required and changed searchQuery string.
 For css, include postcard.
  
-
+DEPLOY APPLICATION TO  RENDER PLATFORM 
+We changed the package.json in the root directory.
+Added scripts to index.js in api : the build script was added to ensure that the frontend and backend are built together.
+After adding the script, npm run build command starts building the frontend.
+If we use Vite, a directory named dist would be created. If we use npx create react app, the directory would be of a different name.
+On desktop, we have our project in a folder. But for the directory to call our project a dynamic folder structure is required.
+Change the index.js file and get path and directory name. The constant used is __dirname. This would guide the render platform to find our project.
+For express.static: read : https://expressjs.com/en/starter/static-files.html
 
 
 
