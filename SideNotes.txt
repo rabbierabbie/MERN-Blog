@@ -285,6 +285,8 @@ Also, we need to restart the server.
 In postcard.jsx add line-clamp-2.
 Thus, in out final display the titles get compressed into two/three lines and three dots are added.
 
+COMPLETE THE HOME PAGE 
+Add the css and use the getposts route to set up recent posts in the postcard below.
 
 
 
