@@ -296,8 +296,12 @@ Created a slice using redux toolkit. Created a themeProvider component and used 
 Updated header component too. Updated stre.js file too.
 
 ADD SEARCH FUNCTIONALITY AND CREATE SEARCH PAGE
-
-
+Added the search functionality to the search button on home page using various hooks.
+Learn about different hooks - difference between useParams and useLocation
+Remember to create states.
+Remember the flow for search functionality : In app.jsx the search page is attached through the route /search. Inside the search button on home page and view more buttons on home page this /search parameter is passed in the url. usenavigate hook is thus used. The search page is rendered. Now, inside the search page the useEffect hook has dependency location.search where location is the location object returned by the useLocation hook and search is the prop for getting the query string. (Remember to make changes and then convert the queryString to string using toString.) fetch request is sent using getposts route through express to mongodb (atlas storing) documents stored in Posts model. Even th sidebar in the search page merely navigates to the page with the required and changed searchQuery string.
+For css, include postcard.
+ 
 
 
 
