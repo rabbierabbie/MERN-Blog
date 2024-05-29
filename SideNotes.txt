@@ -276,6 +276,16 @@ CONTINUED ADDING POST PAGE
 Used dangerouslySetInnerHTML : read about itand xss vulnerability : https://react.dev/reference/react-dom/components/common#dangerously-setting-the-inner-html
 Added extra styling to the dangerously set inner html by adding css code to index.css.
 
+REQUESTING LAST THREE POSTS
+Designed the recntPosts component and added css to it.
+Used the already defined getposts route.
+Used the lineclamp plugin to shorten the titles for the postcard at the bottom of each post page and home page.
+Also, we need to restart the server.
+/imp: we later found out that lineclamp already comes installed in the newer versions of tailwind. So it is better to remove the pluin explicitly added to the tailwind.config.js./
+In postcard.jsx add line-clamp-2.
+Thus, in out final display the titles get compressed into two/three lines and three dots are added.
+
+
 
 
 
