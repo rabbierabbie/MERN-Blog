@@ -288,6 +288,12 @@ Thus, in out final display the titles get compressed into two/three lines and th
 COMPLETE THE HOME PAGE 
 Add the css and use the getposts route to set up recent posts in the postcard below.
 
+ADDED ABOUT PAGE
+Just added some info about the site.
+
+ADD SEARCH PAGE
+
+
 
 
 
