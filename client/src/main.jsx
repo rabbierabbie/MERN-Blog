@@ -2,7 +2,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import './index.css'
+import './index.css';
+import ThemeProvider from './Components/ThemeProvider.jsx';
 import { store, persistor} from './redux/store.js';
 //Redux Persist handles the Redux store's storage and retrieval automatically, making state persistence and retrieval easier.
 import { Provider } from 'react-redux';
@@ -16,9 +17,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   //createRoot(rootElement) is a React utility function used to create a react root element, which is a DOM element in which UI components render themselves. It takes as a parameter the root element that should be created.
   <PersistGate persistor={persistor}>
   <Provider store={store}>
-  
-      <App />
-    
+  <ThemeProvider>
+        <App />
+  </ThemeProvider>
   </Provider>
 </PersistGate>
 );

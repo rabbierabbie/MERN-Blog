@@ -291,7 +291,11 @@ Add the css and use the getposts route to set up recent posts in the postcard be
 ADDED ABOUT PAGE
 Just added some info about the site.
 
-ADD SEARCH PAGE
+ADD DARK MODE TOO
+Created a slice using redux toolkit. Created a themeProvider component and used it to cover our entire frontend in main.jsx.
+Updated header component too. Updated stre.js file too.
+
+ADD SEARCH FUNCTIONALITY AND CREATE SEARCH PAGE
 
 
 
