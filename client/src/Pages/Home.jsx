@@ -3,23 +3,23 @@ import { useEffect, useState } from 'react';
 import PostCard from '../Components/PostCard';
 
 export default function Home() {
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState([]); //hook
 
-  useEffect(() => {
+  useEffect(() => { //hook
     const fetchPosts = async () => {
       const res = await fetch('/api/post/getPosts');
       const data = await res.json();
       setPosts(data.posts);
     };
-    fetchPosts();
+    fetchPosts(); //this has to be written separately as fetchposts is not called on its own here
   }, []);
 
   return (
     <div>
       <div className='flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto '>
-        <h1 className='text-3xl font-bold lg:text-6xl'>Welcome to my Blog</h1>
+        <h1 className='text-3xl font-bold lg:text-6xl'>Welcome to SCS's Blog</h1>
         <p className='text-gray-500 text-xs sm:text-sm'>
-          You can dive into posts related to various technology stacks efficient enough to develop you into a full-stack web developer. Hop on!
+          You can dive into posts related to the various ongoing activities in SCS, IIT (BHU) Varanasi. Hop on!
         </p>
         <Link
           to='/search'

@@ -1,7 +1,7 @@
 import { Button, Select, TextInput } from 'flowbite-react';
 import { useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
 import PostCard from '../Components/PostCard';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export default function Search() {
   const [sidebarData, setSidebarData] = useState({
@@ -12,21 +12,21 @@ export default function Search() {
 
   console.log(sidebarData);
   const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(false);
   const [showMore, setShowMore] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const location = useLocation();
+  const location = useLocation();//hook
 
-  const navigate = useNavigate();
+  const navigate = useNavigate();//hook
 
-  useEffect(() => {
+  useEffect(() => { //hook
     const urlParams = new URLSearchParams(location.search);
     const searchTermFromUrl = urlParams.get('searchTerm');
     const sortFromUrl = urlParams.get('sort');
     const categoryFromUrl = urlParams.get('category');
-    if (searchTermFromUrl || sortFromUrl || categoryFromUrl) {
+    if (searchTermFromUrl || categoryFromUrl || sortFromUrl) {
       setSidebarData({
-        ...sidebarData,
+        ...sidebarData, //spread operator
         searchTerm: searchTermFromUrl,
         sort: sortFromUrl,
         category: categoryFromUrl,
@@ -72,14 +72,15 @@ export default function Search() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const urlParams = new URLSearchParams(location.search);
+    //Searching while considering all the required parameters
     urlParams.set('searchTerm', sidebarData.searchTerm);
-    urlParams.set('sort', sidebarData.sort);
     urlParams.set('category', sidebarData.category);
+    urlParams.set('sort', sidebarData.sort);
     const searchQuery = urlParams.toString();
     navigate(`/search?${searchQuery}`);
   };
 
-  const handleShowMore = async () => {
+  const handleShowMore = async () => { 
     const numberOfPosts = posts.length;
     const startIndex = numberOfPosts;
     const urlParams = new URLSearchParams(location.search);
@@ -91,8 +92,8 @@ export default function Search() {
     }
     if (res.ok) {
       const data = await res.json();
-      setPosts([...posts, ...data.posts]);
-      if (data.posts.length === 9) {
+      setPosts([...posts, ...data.posts]); //spread operator
+      if (data.posts.length === 9) { //Only 9 posts allowed at max for the first view
         setShowMore(true);
       } else {
         setShowMore(false);
@@ -109,7 +110,7 @@ export default function Search() {
               Search Term:
             </label>
             <TextInput
-              placeholder='Search...'
+              placeholder='Search'
               id='searchTerm'
               type='text'
               value={sidebarData.searchTerm}
@@ -119,8 +120,8 @@ export default function Search() {
           <div className='flex items-center gap-2'>
             <label className='font-semibold'>Sort:</label>
             <Select onChange={handleChange} value={sidebarData.sort} id='sort'>
-              <option value='desc'>Latest</option>
-              <option value='asc'>Oldest</option>
+              <option value='desc'>Most Recent</option>
+              <option value='asc'>Least Recent</option>
             </Select>
           </div>
           <div className='flex items-center gap-2'>
@@ -131,19 +132,22 @@ export default function Search() {
               id='category'
             >
               <option value='uncategorized'>Uncategorized</option>
-              <option value='reactjs'>React.js</option>
-              <option value='nextjs'>Next.js</option>
-              <option value='javascript'>JavaScript</option>
+              <option value='scs'>SCS</option>
+              <option value='wellness'>Wellness Council</option>
+              <option value='iec'>IEC</option>
+              <option value='skill'>Skill Council</option>
+              <option value='career'>Career Council</option>
+              <option value='academics'>Academics Council</option>
             </Select>
           </div>
-          <Button type='submit' outline gradientDuoTone='purpleToPink'>
-            Apply Filters
+          <Button type='submit' outline gradientDuoTone='cyanToBlue'>
+            Apply Filter
           </Button>
         </form>
       </div>
       <div className='w-full'>
         <h1 className='text-3xl font-semibold sm:border-b border-gray-500 p-3 mt-5 '>
-          Posts results:
+          Posts:
         </h1>
         <div className='p-7 flex flex-wrap gap-4'>
           {!loading && posts.length === 0 && (
@@ -158,7 +162,7 @@ export default function Search() {
               onClick={handleShowMore}
               className='text-teal-500 text-lg hover:underline p-7 w-full'
             >
-              Show More
+              View More
             </button>
           )}
         </div>

@@ -2,34 +2,22 @@ import { Alert, Button, TextInput,Modal} from 'flowbite-react';
 import { useEffect, useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
 import {app} from '../firebase.js';
+import {updateStart,updateSuccess,updateFailure,deleteUserStart,deleteUserSuccess,deleteUserFailure,signoutSuccess} from '../redux/user/userSlice';
 import { HiOutlineExclamationCircle } from 'react-icons/hi';
-import {
-    getDownloadURL,
-    getStorage,
-    ref,
-    uploadBytesResumable,
-  } from 'firebase/storage';
-  import { Link } from 'react-router-dom';
-  import { useDispatch } from 'react-redux';
-  import {
-    updateStart,
-    updateSuccess,
-    updateFailure,
-    deleteUserStart,
-    deleteUserSuccess,
-    deleteUserFailure,
-    signoutSuccess
-  } from '../redux/user/userSlice';
+import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import {getDownloadURL,getStorage,ref,uploadBytesResumable} from 'firebase/storage';
 
 export default function DashProfile() {
   const { currentUser, error, loading } = useSelector((state) => state.user);
     const [imageFile, setImageFile] = useState(null);
-  const [imageFileUrl, setImageFileUrl] = useState(null);
-  const [imageFileUploadError, setImageFileUploadError] = useState(null);
     const [formData, setFormData] = useState({});
     const [updateUserSuccess, setUpdateUserSuccess] = useState(null);
     const [updateUserError, setUpdateUserError] = useState(null);
     const [showModal, setShowModal] = useState(false);
+    const [imageFileUrl, setImageFileUrl] = useState(null);
+    const [imageFileUploadError, setImageFileUploadError] = useState(null);
+
   const filePickerRef = useRef();
   const dispatch = useDispatch();
 
@@ -104,7 +92,7 @@ export default function DashProfile() {
     );
   };
 
-  useEffect(() => {
+  useEffect(() => { //hook
     if (imageFile) {
       uploadImage();
     }
@@ -187,17 +175,17 @@ export default function DashProfile() {
         />
        <Button
           type='submit'
-          gradientDuoTone='purpleToBlue'
+          gradientDuoTone='cyanToBlue'
           outline
           disabled={loading}
         >
-          {loading ? 'Loading...' : 'Update'}
+          {loading ? 'Loading Soon ...' : 'Update'}
         </Button>
         {currentUser.isAdmin && (
           <Link to={'/create-post'}>{/**If '/' is not added, if will redirect to /dashboard/create-post */}
             <Button
               type='button'
-              gradientDuoTone='purpleToPink'
+              gradientDuoTone='cyanToBlue'
               className='w-full'
             >
               Create a post
@@ -245,7 +233,7 @@ export default function DashProfile() {
             </h3>
             <div className='flex justify-center gap-4'>
               <Button color='failure' onClick={handleDeleteUser}>
-                Yes, I'm sure
+                Yes, I am sure
               </Button>
               <Button color='gray' onClick={() => setShowModal(false)}>
                 No, cancel

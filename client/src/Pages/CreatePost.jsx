@@ -1,26 +1,21 @@
 import { Alert, Button, FileInput, Select, TextInput } from 'flowbite-react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import {
-  getDownloadURL,
-  getStorage,
-  ref,
-  uploadBytesResumable,
-} from 'firebase/storage';
+import {getDownloadURL,getStorage,ref,uploadBytesResumable,} from 'firebase/storage';
 import { app } from '../firebase';
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 //import { CircularProgressbar } from 'react-circular-progressbar';
 //import 'react-circular-progressbar/dist/styles.css';
-import { useNavigate } from 'react-router-dom';
 
 export default function CreatePost() {
   const [file, setFile] = useState(null);
-  const [imageUploadProgress, setImageUploadProgress] = useState(null);
-  const [imageUploadError, setImageUploadError] = useState(null);
   const [formData, setFormData] = useState({});
   const [publishError, setPublishError] = useState(null);
+  const [imageUploadProgress, setImageUploadProgress] = useState(null);
+  const [imageUploadError, setImageUploadError] = useState(null);
 
-  const navigate = useNavigate();
+  const navigate = useNavigate(); //hook
 
   const handleUpdloadImage = async () => {
     try {
@@ -46,9 +41,9 @@ export default function CreatePost() {
         },
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-            setImageUploadProgress(null);
-            setImageUploadError(null);
-            setFormData({ ...formData, image: downloadURL });
+          setImageUploadProgress(null);
+          setImageUploadError(null);
+          setFormData({ ...formData, image: downloadURL });
           });
         }
       );
@@ -99,13 +94,16 @@ export default function CreatePost() {
           />
           <Select
             onChange={(e) =>
-              setFormData({ ...formData, category: e.target.value })
+              setFormData({ ...formData, category: e.target.value }) //spread operator
             }
           >
-            <option value='uncategorized'>Select a category</option>
-            <option value='javascript'>JavaScript</option>
-            <option value='reactjs'>React.js</option>
-            <option value='nextjs'>Next.js</option>
+              <option value='uncategorized'>Uncategorized</option>
+              <option value='scs'>SCS</option>
+              <option value='wellness'>Wellness Council</option>
+              <option value='iec'>IEC</option>
+              <option value='skill'>Skill Council</option>
+              <option value='career'>Career Council</option>
+              <option value='academics'>Academics Council</option>
           </Select>
         </div>
         <div className='flex gap-4 items-center justify-between border-4 border-teal-500 border-dotted p-3'>
@@ -116,7 +114,7 @@ export default function CreatePost() {
           />
           <Button
             type='button'
-            gradientDuoTone='purpleToBlue'
+            gradientDuoTone='cyanToBlue'
             size='sm'
             outline
             onClick={handleUpdloadImage}
@@ -148,7 +146,7 @@ export default function CreatePost() {
             setFormData({ ...formData, content: value });
           }}
         />
-        <Button type='submit' gradientDuoTone='purpleToPink'>
+        <Button type='submit' gradientDuoTone='cyanToBlue'>
           Publish
         </Button>
         {publishError && (

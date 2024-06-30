@@ -55,8 +55,8 @@ export default function Header(){
         to='/'
         className='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'
       >
-        <span className='px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white'>
-          Shreya's
+        <span className='px-2 py-1 bg-gradient-to-r from-indigo-600 via-blue-400 to-sky-300 rounded-lg text-white'>
+          SCS's
         </span>
         Blog
       </Link>
@@ -104,7 +104,7 @@ export default function Header(){
        </Dropdown>
         ):
         (<Link to='/signin'>
-          <Button gradientDuoTone='purpleToBlue' outline>Sign In</Button>
+          <Button gradientDuoTone='cyanToBlue' outline>Sign In</Button>
         </Link>
         )}
         <Navbar.Toggle />
