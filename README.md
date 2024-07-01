@@ -1,3 +1,8 @@
+# SCS's Blog
+
+
+
+
 May 2024
 This project was executed to develop an online platform, using MERN stack, which provides users access to various blogs published on the platform. The website was deployed using Render Cloud Application Hosting services.
 Admin Interface | Admin has the authority to add posts with images which are categorized into various categories. Admin can also delete posts as well as accounts of current users.
