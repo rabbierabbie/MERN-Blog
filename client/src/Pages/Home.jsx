@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <div>
       <div className='flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto '>
-        <h1 className='text-4xl font-bold lg:text-7xl mx-auto'>Hola! Welcome to SCS's Blog</h1>
+        <h1 className='text-4xl font-bold lg:text-7xl mx-auto'>Hola! Welcome to SCS's Blogs</h1>
         <p className=' text-lg sm:text-base mx-auto'>
           You can dive into posts related to the various ongoing activities in SCS, IIT (BHU) Varanasi. Hop on!
         </p>
