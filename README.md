@@ -1,12 +1,14 @@
-# SCS's Blog
+# SCS's Blogs
 
+This is a MERN stack project with authentication features employing Redux Toolkit for state management. The project is for a Single Page Application workflow that uses the Vite Build tool. The website was deployed using Render Cloud Application Hosting services. [Visit](https://mern-blog-jjlw.onrender.com/)
 
+The project includes the following:
 
-
-May 2024
-This project was executed to develop an online platform, using MERN stack, which provides users access to various blogs published on the platform. The website was deployed using Render Cloud Application Hosting services.
-Admin Interface | Admin has the authority to add posts with images which are categorized into various categories. Admin can also delete posts as well as accounts of current users.
-Features like searching posts using date of posting and keywords and filtering them through categories
-Account creation and sign-in features for users using personal credentials or google account
-Authentication was handled securely using JSON Web Token. Light mode and dark mode have been provided for viewing.
-Exposure : ReactJS, Tailwind CSS, Flowbite React, JSON Web Token, Google Firebase, Redux Toolkit, NodeJS, ExpressJS, MongoDB, Insomnia 
++ Backend API with Express & MongoDB
++ Routes for authorisation, signing in, signing up, using google account to sign in, creating a post, deleting a post, updating a post, updating user profile, deleting an account, signing out of current user's account
++ Custom middleware to check JSON web token and store in cookie
++ Custom error middleware
++ JWT authentication stored in HTTP-only cookie
++ Protected routes and endpoints
++ React frontend to sign up, sign in, sign out, view profile, update profile, create post, view posts, delete posts, view list of users, delete an account
++ Flowbite-React, an open-source UI component library, used for adding styling effects
