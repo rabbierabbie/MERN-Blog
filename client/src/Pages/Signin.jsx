@@ -52,10 +52,8 @@ export default function SignIn() {
         <div className='flex-1'>
           <Link to='/' className='font-bold dark:text-white text-4xl'>
             <span className='px-2 py-1 bg-gradient-to-r from-indigo-600 via-blue-400 to-sky-300 rounded-lg text-white'>
-              SCS's
-            </span>
-            Blog
-          </Link>
+              SCS's Blogs
+            </span>          </Link>
           <p className='text-sm mt-5'>
             You may sign in with your email address and password
             or with your Google account.

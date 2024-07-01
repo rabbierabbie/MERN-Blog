@@ -1,12 +1,14 @@
-import { Alert, Button, Label, Spinner, TextInput } from 'flowbite-react';
-import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import {Alert, Button, Label, Spinner, TextInput} from 'flowbite-react';
+import {useState} from 'react';
+import {Link, useNavigate} from 'react-router-dom';
 import OAuth from '../Components/OAuth';
 
 export default function SignUp() {
+
   const [formData, setFormData] = useState({});
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
+
   const navigate = useNavigate(); //hook
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value.trim() }); //spread operator used here
@@ -44,9 +46,8 @@ export default function SignUp() {
         <div className='flex-1'>
           <Link to='/' className='font-bold dark:text-white text-4xl'>
             <span className='px-2 py-1 bg-gradient-to-r from-indigo-600 via-blue-400 to-sky-300 rounded-lg text-white'>
-              SCS's
+              SCS's Blogs
             </span>
-            Blog
           </Link>
           <p className='text-sm mt-5'>
             You may sign up with your email address and password
@@ -58,20 +59,20 @@ export default function SignUp() {
         <div className='flex-1'>
           <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
             <div>
-              <Label value='Your username' />
-              <TextInput
-                type='text'
-                placeholder='Username'
-                id='username'
-                onChange={handleChange}
-              />
-            </div>
-            <div>
               <Label value='Your email' />
               <TextInput
                 type='email'
                 placeholder='name@organisation.com'
                 id='email'
+                onChange={handleChange}
+              />
+            </div>
+            <div>
+              <Label value='Your username' />
+              <TextInput
+                type='text'
+                placeholder='Username'
+                id='username'
                 onChange={handleChange}
               />
             </div>

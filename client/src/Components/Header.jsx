@@ -51,30 +51,7 @@ export default function Header(){
 
   return (
     <Navbar className='border-b-2'>
-      <Link
-        to='/'
-        className='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'
-      >
-        <span className='px-2 py-1 bg-gradient-to-r from-indigo-600 via-blue-400 to-sky-300 rounded-lg text-white'>
-          SCS's
-        </span>
-        Blog
-      </Link>
-      <form onSubmit={handleSubmit}>
-        <TextInput
-          type='text'
-          placeholder='Search...'
-          rightIcon={AiOutlineSearch}
-          className='hidden lg:inline'
-          value={searchTerm}
-          onChange={(e)=>{setSearchTerm(e.target.value)}}
-        />
-      </form>
-      <Button className='w-12 h-10 lg:hidden' color='gray' pill>
-        <AiOutlineSearch />
-      </Button>
-      <div className='flex gap-2 md:order-2'>
-      <Button
+       <Button
           className='w-12 h-10 hidden sm:inline'
           color='gray'
           pill
@@ -82,24 +59,25 @@ export default function Header(){
         >
           {theme === 'light' ? <FaSun /> : <FaMoon />}
         </Button>
+
+        <div className='flex gap-2 md:order-2'>
         {currentUser?(
          <Dropdown
-         arrowIcon={false}
+         arrowIcon={true}
          inline
          label={
-           <Avatar alt='user' img={currentUser.profilePicture} rounded />
+           <Avatar alt='current-user' img={currentUser.profilePicture} rounded />
          }
        >
          <Dropdown.Header>
-           <span className='block text-sm'>@{currentUser.username}</span>
-           <span className='block text-sm font-medium truncate'>
-             {currentUser.email}
+           <span className='block text-md font-small truncate'>
+           {currentUser.email}
            </span>
+           <span className='block text-md font-small truncate'>@{currentUser.username}</span>
          </Dropdown.Header>
          <Link to={'/dashboard?tab=profile'}>
            <Dropdown.Item>Profile</Dropdown.Item>
          </Link>
-         <Dropdown.Divider />
          <Dropdown.Item onClick={handleSignout}>Sign out</Dropdown.Item>
        </Dropdown>
         ):
@@ -109,6 +87,28 @@ export default function Header(){
         )}
         <Navbar.Toggle />
       </div>
+
+      <form onSubmit={handleSubmit}>
+        <TextInput
+          type='text'
+          placeholder='Search...'
+          rightIcon={AiOutlineSearch}
+          className='hidden lg:inline'
+          value={searchTerm}
+          onChange={(ev)=>{setSearchTerm(ev.target.value)}}
+        />
+      </form>
+      <Button className='w-12 h-10 lg:hidden' color='gray' pill>
+        <AiOutlineSearch />
+      </Button>
+      <Link
+        to='/'
+        className='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'
+      >
+        <span className=' text-white px-4 py-2 bg-gradient-to-r rounded-lg from-indigo-600 via-blue-400 to-sky-300'>
+          SCS's Blogs
+        </span>
+      </Link>      
       <Navbar.Collapse>
           <Navbar.Link active={path==='/'} as={'div'}>{/**We find here that Navbar.Link creates an anchor tag an so does Link tag. So we describe Navbar.Link as div*/}
             <Link to='/'>
@@ -120,7 +120,7 @@ export default function Header(){
                 About
             </Link>
           </Navbar.Link>
-        </Navbar.Collapse>
+        </Navbar.Collapse>     
     </Navbar>
   );
 };
