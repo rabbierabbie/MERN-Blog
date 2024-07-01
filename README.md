@@ -1,6 +1,6 @@
 # SCS's Blog
 
-This is a MERN stack project with authentication features employing Redux Toolkit for state management. The project is for a Single Page Application workflow that uses the Vite Build tool.
+This is a MERN stack project with authentication features employing Redux Toolkit for state management. The project is for a Single Page Application workflow that uses the Vite Build tool. The website was deployed using Render Cloud Application Hosting services. [Visit](https://mern-blog-jjlw.onrender.com/)
 
 The project includes the following:
 
