@@ -3,7 +3,8 @@
 
 This is a MERN stack project with authentication features, employing Redux Toolkit for state management. The project is for a Single Page Application workflow that uses the Vite Build Tool. The website was deployed using Render Cloud Application Hosting services. [Visit](https://mern-blog-jjlw.onrender.com/)
 
-Some important features of the project:
+
+Some important features of the project are:
 
 + Includes features to search for blogs filtered on the basis of the user's requirements
 + Includes React frontend to sign up, sign in, sign out, view profile, update profile, create post, view posts, delete posts, view list of users, delete an account
