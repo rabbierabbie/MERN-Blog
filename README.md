@@ -1,7 +1,7 @@
 # SCS's Blogs
 ### Provides an online platform for surfing through blogs related to Student Counselling Services, IIT (BHU) Varanasi
 
-This is a MERN stack project with authentication features employing Redux Toolkit for state management. The project is for a Single Page Application workflow that uses the Vite Build tool. The website was deployed using Render Cloud Application Hosting services. [Visit](https://mern-blog-jjlw.onrender.com/)
+This is a MERN stack project with authentication features, employing Redux Toolkit for state management. The project is for a Single Page Application workflow that uses the Vite Build Tool. The website was deployed using Render Cloud Application Hosting services. [Visit](https://mern-blog-jjlw.onrender.com/)
 
 Some important features of the project:
 
